@@ -18,9 +18,9 @@ jobs:
       - name: Update NPS in readme
         run: |
           res=$(curl -s "${{ secrets.NPS_SHEETS_URL }}")
-          total=$(echo "$res" | jq '.[]["How likely are you to recommend working with this Hubber to colleagues? From 0 (not likely) to 10 (extremely likely)."]' | wc -l)
-          promoters=$(echo "$res" | jq '.[]["How likely are you to recommend working with this Hubber to colleagues? From 0 (not likely) to 10 (extremely likely)."]|tonumber|select(.>=9)' | wc -l)
-          detractors=$(echo "$res" | jq '.[]["How likely are you to recommend working with this Hubber to colleagues? From 0 (not likely) to 10 (extremely likely)."]|tonumber|select(.<=6)' | wc -l)
+          total=$(echo "$res" | jq '.[]["How likely are you to recommend working with Keith to colleagues?"]' | wc -l)
+          promoters=$(echo "$res" | jq '.[]["How likely are you to recommend working with Keith to colleagues?"]|tonumber|select(.>=9)' | wc -l)
+          detractors=$(echo "$res" | jq '.[]["How likely are you to recommend working with Keith to colleagues?"]|tonumber|select(.<=6)' | wc -l)
           nps=$(bc <<< "scale=2; (${promoters:-0}-${dectrators:-0})/${total:-0} * 100")
           echo "Total: $total, Promoters: $promoters, Detractors: $detractors. NPS: $nps"
           echo 
