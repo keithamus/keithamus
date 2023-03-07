@@ -26,12 +26,7 @@ jobs:
           echo 
           sed -i "s|\(<!--nps-->\)[^<]\+\(<!--/nps-->\)|\1${nps:-0}\2|g" README.md
           cat README.md
-          git config --global user.name '${GITHUB_ACTOR}'
-          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add -A && git commit -m'update nps score' --allow-empty
           git push -u origin HEAD
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
