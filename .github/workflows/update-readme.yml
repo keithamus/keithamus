@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Update NPS in readme
         run: |
+          res=$(curl -s "${{ secrets.NPS_SHEETS_URL }}")
           total=$(echo "$res" | jq '.[]["How likely are you to recommend working with this Hubber to colleagues? From 0 (not likely) to 10 (extremely likely)."]' | wc -l)
           promoters=$(echo "$res" | jq '.[]["How likely are you to recommend working with this Hubber to colleagues? From 0 (not likely) to 10 (extremely likely)."]|tonumber|select(.>=9)' | wc -l)
           detractors=$(echo "$res" | jq '.[]["How likely are you to recommend working with this Hubber to colleagues? From 0 (not likely) to 10 (extremely likely)."]|tonumber|select(.<=6)' | wc -l)
