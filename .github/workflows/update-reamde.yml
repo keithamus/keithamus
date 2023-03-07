@@ -1,0 +1,36 @@
+name: Update NPS
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update this repo's README
+        uses: JasonEtco/rss-to-readme@v1
+        with:
+          feed-url: https://keithcirkel.co.uk/feed.xml
+          readme-section: feed
+          empty-commits: "false"
+
+      - uses: actions/checkout@v3
+      - name: Update NPS in readme
+        run: |
+          total=$(echo "$res" | jq '.[]["How likely are you to recommend working with this Hubber to colleagues? From 0 (not likely) to 10 (extremely likely)."]' | wc -l)
+          promoters=$(echo "$res" | jq '.[]["How likely are you to recommend working with this Hubber to colleagues? From 0 (not likely) to 10 (extremely likely)."]|tonumber|select(.>=9)' | wc -l)
+          detractors=$(echo "$res" | jq '.[]["How likely are you to recommend working with this Hubber to colleagues? From 0 (not likely) to 10 (extremely likely)."]|tonumber|select(.<=6)' | wc -l)
+          nps=$(bc <<< "scale=2; (${promoters:-0}-${dectrators:-0})/${total:-0} * 100")
+          echo "Total: $total, Promoters: $promoters, Detractors: $detractors. NPS: $nps"
+          echo 
+          sed -i "s|\(<!--nps-->\)[^<]\+\(<!--/nps-->\)|\1${nps:-0}\2|g" README.md
+          cat README.md
+          git config --global user.name '${GITHUB_ACTOR}'
+          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+          git add -A && git commit -m'update nps score' --allow-empty
+          git push -u origin HEAD
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
