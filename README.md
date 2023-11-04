@@ -9,11 +9,11 @@ It is I, keithamus, revered thought Guru, Cyber Shepherd, Magnanimous Leader of 
 
 # Recent Blog Posts
 <!--START_SECTION:feed-->
+* [My Open Source OKRS (November 2023)](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;my-open-source-okrs-nov-2023&#x2F;)
 * [CSS Classes considered harmful](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;css-classes-considered-harmful&#x2F;)
 * [ES6 Template Literals, the Handlebars killer?](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;es6-template-literals&#x2F;)
 * [Metaprogramming in ES6: Part 3 - Proxies](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;metaprogramming-in-es6-part-3-proxies&#x2F;)
 * [Metaprogramming in ES6: Part 2 - Reflect](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;metaprogramming-in-es6-part-2-reflect&#x2F;)
-* [Metaprogramming in ES6: Symbols and why they&#39;re awesome](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;metaprogramming-in-es6-symbols&#x2F;)
 <!--END_SECTION:feed-->
 
 # NPS Score
