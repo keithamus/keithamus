@@ -17,4 +17,4 @@ It is I, keithamus, revered thought Guru, Cyber Shepherd, Magnanimous Leader of 
 <!--END_SECTION:feed-->
 
 # NPS Score
-My current NPS score is: <!--nps-->94.00<!--/nps-->%! [Want to submit NPS feedback?](https://forms.gle/FZpNV1HXd3dwEpcG8)
+My current NPS score is: <!--nps-->95.00<!--/nps-->%! [Want to submit NPS feedback?](https://forms.gle/FZpNV1HXd3dwEpcG8)
