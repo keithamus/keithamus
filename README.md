@@ -9,11 +9,11 @@ It is I, keithamus, revered thought Guru, Cyber Shepherd, Magnanimous Leader of 
 
 # Recent Blog Posts
 <!--START_SECTION:feed-->
+* [Joining Mozilla](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;joining-mozilla&#x2F;)
 * [100 patches to 5 browsers in 18 months](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;100-patches-to-5-browsers-in-18-months&#x2F;)
 * [I don&#39;t have time to learn React](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;i-dont-have-time-to-learn-react&#x2F;)
 * [A playbook for hosting simple services](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;a-playbook-for-hosting-simple-services&#x2F;)
 * [CSS Classes considered harmful](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;css-classes-considered-harmful&#x2F;)
-* [ES6 Template Literals, the Handlebars killer?](https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;es6-template-literals&#x2F;)
 <!--END_SECTION:feed-->
 
 # NPS Score
